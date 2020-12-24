@@ -39,7 +39,7 @@
     },
     "scripts": {
 		"compile": [
-            "echo '<?php return [...]; ' > config/app_local.php",
+            
             "chmod +x bin/cake",
             "bin/cake migrations migrate --no-lock",
             
