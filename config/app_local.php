@@ -15,7 +15,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Security and encryption configuration
@@ -36,7 +36,7 @@ return [
      */
     'Datasources' => [
         'default' => [
-            'host' => 'localhost',
+            'host' => 'ec2-23-20-205-19.compute-1.amazonaws.com',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -44,10 +44,11 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'root',
-            'password' => '',
+            'username' => 'vdpzhpqvhvrejt',
+            'password' => 'd9115dff14f7da7200522f195c60afc395f7e1e6174800e8d6c780de55d5d5bb
+',
 
-            'database' => 'farmacia3',
+            'database' => 'dj9n4qjii3llv',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
