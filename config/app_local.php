@@ -44,7 +44,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'rootfarmacia',
+            'username' => 'farmaciaroot',
             'password' => '12345678',
 
             'database' => 'farmacia3',
