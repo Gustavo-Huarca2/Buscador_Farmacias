@@ -45,7 +45,7 @@ class PagesController extends AppController
      */
     public function display(string ...$path): ?Response
     {
-        $ses= $this->request->getSession()->check('Auth.id');
+       /* $ses= $this->request->getSession()->check('Auth.id');
         if($ses){
             $redirect = [
                 'controller' => 'Search',
@@ -59,7 +59,7 @@ class PagesController extends AppController
             'action' => 'login',    
         ];
         return $this->redirect($redirect);
-    }
+    }*/
         if (!$path) {
             return $this->redirect('/');
         }

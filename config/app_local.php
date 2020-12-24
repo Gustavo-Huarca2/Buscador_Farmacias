@@ -15,7 +15,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Security and encryption configuration
@@ -43,8 +43,8 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-
-            'username' => 'vdpzhpqvhvrejt',
+			'driver' => 'Cake\Database\Driver\Postgres',
+			'username' => 'vdpzhpqvhvrejt',
             'password' => 'd9115dff14f7da7200522f195c60afc395f7e1e6174800e8d6c780de55d5d5bb
 ',
 

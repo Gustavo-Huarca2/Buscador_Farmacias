@@ -28073,3 +28073,281 @@ Stack Trace:
 Request URL: /users/viaceacew
 
 
+2020-12-24 02:39:14 Error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 140
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Caused by: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 132
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:132
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:138
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost/Buscador_Farmacias/users/login
+
+
+2020-12-24 02:39:43 Error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 140
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Caused by: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 132
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:132
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:138
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost/Buscador_Farmacias/users/login
+
+
+2020-12-24 02:40:48 Error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 140
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Caused by: [PDOException] SQLSTATE[HY000] [2002] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+ in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php on line 132
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:132
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver.php:138
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\Resolver\OrmResolver.php:59
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:154
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\PasswordIdentifier.php:99
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Identifier\IdentifierCollection.php:52
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Authenticator\FormAuthenticator.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\AuthenticationService.php:183
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:105
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Request URL: /users/login
+Referer URL: http://localhost/Buscador_Farmacias/users/login
+
+
+2020-12-24 02:40:48 Error: [Cake\Http\Exception\MissingControllerException] Controller class Display could not be found. in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Request URL: /display
+
+
+2020-12-24 02:44:05 Error: [Cake\Http\Exception\NotFoundException] Please replace templates/Pages/home.php with your own version or re-enable debug mode. in D:\SEMESTRE 6\CS\Buscador_Farmacias\templates\Pages\home.php on line 26
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\View\View.php:1176
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\View\View.php:1134
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\View\View.php:764
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Controller\Controller.php:696
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\src\Controller\PagesController.php:80
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authorization\src\Middleware\AuthorizationMiddleware.php:129
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\authentication\src\Middleware\AuthenticationMiddleware.php:124
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+Request URL: /
+
+
+2020-12-24 02:48:27 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Postgres cannot be used due to a missing PHP extension or unmet dependency in D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php on line 202
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Postgres',
+)
+Stack Trace:
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Database\Connection.php:142
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php:108
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php:212
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\debug_kit\src\Panel\SqlLogPanel.php:53
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\debug_kit\src\ToolbarService.php:219
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\SEMESTRE 6\CS\Buscador_Farmacias\webroot\index.php:40
+
+
+
