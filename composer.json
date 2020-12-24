@@ -41,7 +41,7 @@
 		"compile": [
             
             "chmod +x bin/cake",
-            "bin/cake migrations migrate --no-lock",
+            "bin/cake migrations migrate --no-lock"
            
         ],
         "post-install-cmd": "App\\Console\\Installer::postInstall",
