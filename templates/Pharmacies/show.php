@@ -103,4 +103,4 @@
 	<div id="lat"><?= h($pharmacy->latitude) ?></div>
 	<div id="lng"><?= h($pharmacy->length) ?></div>
 </div>
-<?= $this->Html->script(['MapaView']) ?>
+<?= $this->Html->script(['MapaShow']) ?>

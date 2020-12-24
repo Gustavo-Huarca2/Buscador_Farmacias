@@ -8,7 +8,16 @@
 	height: 300px!important; 
 	margin-bottom: 2.0rem;
 	}
-	
+.noBorder {
+	background-color: transparent;
+	color: #2f85ae;
+	border: 0;
+}	
+.noBorder:hover, .noBorder:focus, .noBorder:active{
+	background-color: transparent;
+	color: #2f85ae;
+	border: 0;
+}
 /*----------- ACORDEON -----------*/
 body{
 	background: #ecf0f1;

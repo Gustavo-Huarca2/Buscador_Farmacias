@@ -52,7 +52,6 @@
                     <td><?= h($message->email) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $message->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $message->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $message->id], ['confirm' => __('Are you sure you want to delete # {0}?', $message->id)]) ?>
                     </td>
                 </tr>

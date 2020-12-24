@@ -63,13 +63,15 @@
 <script src="//code.jquery.com/jquery-3.5.0.min.js"></script>
 <div class="pharmacies index content">
 <a class="button float-right" id="distance">Sort by distance</a>
+<a class="button float-right" id="price" data-rel="<?= $this->Url->build(['_ext' => 'json']) ?>">Sort by price</a>
 <h3 id="result-length" style="font-size: 200%;"></h3>
 <div class="table-responsive">
 	<table>
             <thead>
-                <tr>
+                <tr id="result-head">
                     <th><?= $this->Paginator->sort('name') ?></th>
-                    <th><?= $this->Paginator->sort('address') ?></th>
+                    <th><?= $this->Paginator->sort('type') ?></th>
+					<th><?= $this->Paginator->sort('value') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -82,100 +84,9 @@
 <br>
 <?= $this->Html->script(['Index']) ?>
 <script>
-$(function() {
-	var farmacias;
-	$('#button').click(function() {
-		var targeturl = $(this).data('rel'); //'/Farmacia/pharmacies/search'
-		var search = 'csrfToken=<?= $csrfToken ?>&edit=' + $('#edit').val() + "&length=" + $('#length').val() +"&latitude="+ $('#latitude').val();
-		var lat=$("#latitude").val(),lng=$("#length").val();
-		$('#result-length').html('Buscando...');
-		if(navigator.geolocation&&lat==""&&lng==""){
-			navigator.geolocation.getCurrentPosition(function(position){
-				$("#latitude").val(position.coords.latitude);
-				$("#length").val(position.coords.longitude);
-				$('#msg').html('Uso de gps');
-			});
-			
-		}
-		//console.log(search);
-		$.ajax({
-			type: 'get',
-			url: targeturl,
-			data: search,
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-			},
-			success: function(response){
-				farmacias=response.pharmacies;
-				var productos=response.products;
-				$('#result-container').html('');
-				for(i=0;i<farmacias.length;i++){
-					//var nuevoTr = "<tr><th>Columna 1</th><th>Column 2</th><th>Columna 3</th></tr>";
-					var nuevoTr = "<tr><td>";
-					nuevoTr=nuevoTr.concat(farmacias[i].name,"</td><td>",farmacias[i].address,
-						"</td><td><a href=/Buscador_Farmacias/pharmacies/show/",farmacias[i].id,">Ver Farmacia</a></td>");
-					$('#result-container').append(nuevoTr);
-				}
-				
-				$('#result-length').html('Resultados encontrados: ');
-				$('#result-length').append(farmacias.length);
-				/* if (pharmacies) {
-					//var rpta = pharmacies;
-					$('#result-container').html('xD');
-				}else
-					$('#result-container').html('vacio'); */
-					if(farmacias.length!=0){
-						window.scrollTo(0,document.body.scrollHeight); 
-					}
-			},
-			error: function(e) {
-				alert("An error occurred: " + e.responseText.message);
-				console.log(e);
-			}
-		});
-	});
-	
-	$('#distance').click(function(){
-		var lat=$("#latitude").val(),lng=$("#length").val();
-		$('#result-length').html('Orden por distancia');
-		if(navigator.geolocation&&lat==""&&lng==""){
-			navigator.geolocation.getCurrentPosition(function(position){
-				$("#latitude").val(position.coords.latitude);
-				$("#length").val(position.coords.longitude);
-				$('#msg').html('Uso de gps');
-				lat=$("#latitude").val();
-				lng=$("#length").val();
-			});
-		}
-		if(lat!=""&&lng!=""){
-			let n = farmacias.length;
-			for (let i = 1; i < n; i++) {
-				var current = farmacias[i];
-				let j = i-1; 
-				while ((j > -1) && (Math.sqrt(Math.pow(current.length-lng,2)+Math.pow(current.latitude-lat,2)) < 
-					(Math.sqrt(Math.pow(farmacias[j].length-lng,2)+Math.pow(farmacias[j].latitude-lat,2)))) ) {
-					farmacias[j+1] = farmacias[j];
-					j--;
-				}
-				farmacias[j+1] = current;
-			}
-			$('#result-container').html('');
-			for(i=0;i<farmacias.length;i++){
-				//var nuevoTr = "<tr><th>Columna 1</th><th>Column 2</th><th>Columna 3</th></tr>";
-				var nuevoTr = "<tr><td>";
-				nuevoTr=nuevoTr.concat(farmacias[i].name,"</td><td>",farmacias[i].address,
-					"</td><td><a href=/Buscador_Farmacias/pharmacies/show/",farmacias[i].id,">Ver Farmacia</a></td>");
-				$('#result-container').append(nuevoTr);
-			}
-			
-		}else{
-			$('#result-length').html('No se registro ubicacion');
-		}
-		
-		
-	});
-
-});
+<?php foreach ($farmacias as $pharmacy): ?>
+	L.marker([<?= $this->Number->format($pharmacy->latitude) ?>, <?= $this->Number->format($pharmacy->length) ?>],{icon: iconMarker}).addTo(mymap);
+<?php endforeach; ?>
 </script>
 </div>
 </div>

@@ -17,8 +17,8 @@ class SearchController extends AppController {
 			$this->set(compact('csrfToken', '_serialize'));
 			$ss->write($cc, $csrfToken);
 			$Pharmacias = $this->getTableLocator()->get('pharmacies');
-			$queryP = $Pharmacias->find();
-			$this->set(compact('queryP'));
+			$farmacias = $Pharmacias->find();
+			$this->set(compact('farmacias'));
 		} else {
 			$searchProduct="";
 			//$this->Session->write('Latitud', '12345');
@@ -44,7 +44,6 @@ class SearchController extends AppController {
 				->withType('application/json')
 				->withStringBody(json_encode([
 				'pharmacies' => $query,
-				'products' => $queryP,
 				'result' => $result
 			]));
 			//$this->set('pharmacy',$this->paginate($query));
@@ -52,26 +51,29 @@ class SearchController extends AppController {
 			//$this->set(compact(['query']));
 		}
     }
-	public function distance(){
+	public function price(){
 		if (!$this->request->is(['ajax'])) {
 			echo "Error de acceso";
 		} else {
+			$ss = $this->getRequest()->getSession(); //sesion de consulta
+			$cc = 'search_simple_csrf';
+			$csrfToken = bin2hex(random_bytes(24)); //creamos una clave de consulta
+			$_serialize = ['csrfToken'];  
+			$this->set(compact('csrfToken', '_serialize'));
+			$ss->write($cc, $csrfToken);
 			$searchProduct="";
 			//$this->Session->write('Latitud', '12345');
 			//Captura de consulta
 			$searchProduct=$this->request->getQuery('edit');
-			$lat=$this->request->getQuery('latitude');
-			$lng=$this->request->getQuery('length');
-				$Products = $this->getTableLocator()->get('products');
-				$queryP = $Products->find()->where(['name LIKE'=>"%{$searchProduct}%"]); 
+			$Products = $this->getTableLocator()->get('products');
+			$queryP = $Products->find()->where(['name LIKE'=>"%{$searchProduct}%"])->order(['price' => 'ASC']); 
 			//Invocar a la tabla farmacias
 			$Pharmacies = $this->getTableLocator()->get('pharmacies');
 			$query = $Pharmacies->find();
 			if($searchProduct!=""){
-				$query->distinct('Pharmacies.id')
-					->matching('Products', function ($q)use ($searchProduct) {//innerJoinWith
+				$query->matching('Products', function ($q)use ($searchProduct) {//innerJoinWith
 					return $q->where(['Products.name LIKE' => "%$searchProduct%"]);
-			});
+			})->order(['Products.price' => 'ASC']);
 			//$query->order(['length' => sqrt(pow('length'-$lng,2)+ pow('latitude'-$lat,2)) ]);
 			}else{
 				$query->where(['id '=> -1]);

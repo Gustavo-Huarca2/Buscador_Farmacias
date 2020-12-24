@@ -34,32 +34,20 @@ return [
      *
      * See app.php for more configuration options.
      */
-	 /*'host' => 'db4free.net',
-
-			'username' => 'farmaciaroot',
-            'password' => '12345678',
-
-            'database' => 'farmacia3',
-
-
-            'url' => env('DATABASE_URL', null),*/
     'Datasources' => [
         'default' => [
-            'host' => 'ec2-23-20-205-19.compute-1.amazonaws.com',
+            'host' => 'localhost',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-			'driver' => 'Cake\Database\Driver\Postgres',
-			'username' => 'vdpzhpqvhvrejt',
-            'password' => 'd9115dff14f7da7200522f195c60afc395f7e1e6174800e8d6c780de55d5d5bb',
 
-            'database' => 'dj9n4qjii3llv',
-			'port' => '5432',
-			'sslmode' =>'require',
-			'sslmode' => 'require',
+            'username' => 'root',
+            'password' => '',
+
+            'database' => 'search_pharmacy',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
